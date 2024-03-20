@@ -1,0 +1,883 @@
+.root{
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-xl: 1200px;
+    --principal: 'Poppins', sans-serif;
+    --parrafos: 'Lato', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Anta", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #1d273b;
+}
+
+header {
+    width: 100%;
+    height: 3.5rem;
+    background: #ffffff00;
+    border-bottom: 1px solid transparent;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
+    transition: ease-in-out 0.5s;
+}
+
+.contenedor-pr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor-pr h3 {
+    margin-left: 5rem;
+    font-size: 2.4rem;
+    color: white;
+    cursor: pointer;
+    transition: all .7s;
+}
+
+/* Estilos para la navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 3rem; /* Espaciado entre elementos del menú */
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff; 
+    transition: all .7s;
+    font-size: 0.9rem;
+}
+
+nav a:hover {
+    background-color: #19b10b;;
+    padding: 0.8rem;
+}
+
+.home {
+    border-bottom: 2px solid #19b10b;
+    padding-bottom: 0.5rem;
+}
+
+.contenedor {
+    background: linear-gradient(rgba(0, 0, 0, 0.854), rgba(0, 0, 0, 0.591)), url(../Img/fondo-copia.jpg);
+    background-color: #1e1e1e; clip-path: polygon(0 0, 100% 0, 100% 75%, 70% 100%, 0 85%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 40rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../Img/fondo.jpg) center/cover fixed; 
+    z-index: 1;
+}
+
+.textos {
+    text-align: center;
+    color: #333; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 60%;
+    margin: auto;
+    padding: auto;
+    padding-top: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+.textos h1 {
+    margin-top: 4rem;
+    font-size: 4.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    text-shadow: 0 2px 5px black;
+}
+
+.textos p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 5px black;
+}
+
+.textos a {
+    display: inline-block;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    transition: all 0.7s;
+    transition: background-color 0.3s ease-in-out;
+}
+
+@keyframes cambioTamanoBoton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.textos a:hover {
+    animation: cambioTamanoBoton 0.2s ease-in-out;
+}
+
+h2 {
+    padding-top: 3rem; 
+    text-align: center; 
+    font-size: 2rem; 
+    color: white; 
+    border-bottom: 4px solid #53b62900; 
+    width: 15%; 
+    margin: auto; 
+    padding-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; 
+    background: linear-gradient(to right, #54b629, #e0ff16); /* Gradiente que cambiará de color */
+    animation: desplazamiento 2s infinite alternate; /* Animación de desplazamiento */
+}
+
+@keyframes desplazamiento {
+    from {
+        transform: translateX(-100%); /* Desplazamiento inicial a la izquierda */
+    }
+    to {
+        transform: translateX(100%); /* Desplazamiento final a la derecha */
+    }
+}
+
+.hamburguer {
+    width: 100px;
+    height: 80px;
+    padding-top: 1rem;
+    display: none;
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.hamburguer i {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    color: #ffffff;
+}
+
+.contenido {
+    width: 100%;
+    height: 32rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenido p {
+    font-weight: 100;
+    margin-top: 14px;
+    color: #5D6678;
+}
+
+.botones {
+    display: flex;
+    gap: 2rem;
+}
+
+.contenido a {
+    margin: 5.5rem 0 0 0;
+    width: 12rem;
+    display: inline-block;
+    background-color:  rgba(0, 128, 0, 0);
+    border: 2px solid #19b10b;;
+    text-align: center;
+    color: #fff;
+    padding: 0.8rem 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px #0cab1f16;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Informacion */
+
+.contenedor-inicial {
+    width: 75%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-articulo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    justify-content: space-around;
+}
+
+.articulo {
+    width: 30%;
+    background: #fff;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    padding: 45px 30px 60px 30px;
+    transition: 0.5s;
+}
+
+.articulo i {
+    font-size: 30px;
+    color: #fff;
+    background: #54b629;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 50%;
+    box-shadow: 2px 1px 8px #0000001f;
+    animation: rotateAnimation 5s linear infinite;
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg); /* Inicio de la rotación, 0 grados */
+    }
+    to {
+        transform: rotate(360deg); /* Fin de la rotación, 360 grados (una vuelta completa) */
+    }
+}
+
+.articulo h3 {
+    font-size: 1.7rem;
+    color: #000000;
+    margin-top: 2.5rem;
+}
+
+.articulo p {
+    font-weight: 100;
+    color: #525252;
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+
+.articulo a {
+    color: #5D6678;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.articulo a:hover {
+    color: #3ec416;
+    transition: color .5s;
+}
+
+
+/* Servicios */
+
+.servicios-pr{
+    background-color: #1e1e1e;
+}
+
+.servicios {
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+    padding: 6rem 0;
+}
+
+.skill {
+    margin-bottom: 2rem;
+    position: relative; 
+}
+
+.skill h4 {
+    margin-bottom: 0.7rem;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.bar {
+    height: 0.4rem;
+    background-color: #53b629ea; 
+    width: 0; 
+    transition: width 3s ease;
+}
+
+.percentage {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0.4rem;
+    background-color: #54b629;
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* Agrega animación para llenar la barra gradualmente */
+
+@keyframes fillBar {
+    to {
+        width: var(--percent); /* Ancho máximo cuando la animación esté completa */
+    }
+}
+
+/* Aplica la animación y el porcentaje a cada clase que tiene la propiedad de la barra */
+
+.skill .bar {
+    --percent: 61%;
+    animation: fillBar 1s forwards;
+}
+
+.skill:nth-child(2) .bar {
+    --percent: 50%;
+    animation: fillBar 1s forwards;
+}
+
+.skill:nth-child(3) .bar {
+    --percent: 80%;
+    animation: fillBar 1s forwards;
+}
+
+.skill:nth-child(4) .bar {
+    --percent: 50%;
+    animation: fillBar 1s forwards;
+}
+
+.skill:nth-child(5) .bar {
+    --percent: 50%;
+    animation: fillBar 1s forwards;
+}
+
+.skill:nth-child(6) .bar {
+    --percent: 50%;
+    animation: fillBar 1s forwards;
+}
+
+/* Proyectos */
+
+.contenedor-proyecto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 75%;
+    margin: auto;
+    margin-bottom: 5rem;
+    cursor: pointer;
+}
+
+.proyecto {
+    width: 100%; 
+    margin: 2rem 0 1rem 0;
+}
+
+.proyecto img {
+    width: 100%; 
+    height: auto; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.179);
+    transition: transform 0.5s ease-in-out;
+}
+
+.proyecto img:hover {
+    transform: translateY(-1rem);
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.49);
+}
+
+/* FORMULARIO */
+
+.formulario-principal {
+    background-color: #1e1e1e; clip-path: polygon(0 10%, 30% 0, 100% 20%, 100% 100%, 0 100%);;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+    width: 75%;
+    height: auto;
+    margin: auto;
+}
+
+.informacion {
+    margin-bottom: 2rem;
+    transition: all 0.5s;
+}
+
+.informacion h3 {
+    padding-bottom: 2.5rem;
+    margin-top: 5rem;
+    font-size: 1.9rem;
+    color: #fff;
+}
+
+.informacion p {
+    padding-bottom: 3rem;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.informacion i {
+    font-size: 1rem;
+    display: inline-block;
+    color: #ffffff2a;
+    border: 1px solid #ffffff25;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    line-height: 1.9rem;
+    cursor: pointer;
+    margin: 1rem 0.2rem;
+    text-align: center;
+    transition: all ease-in-out 0.5s; 
+}
+
+.informacion i:hover {
+    color: #19b10b;
+    font-size: 1.rem;
+    border: 1px solid #19b10b6c;
+    transform: rotate(360deg);
+}
+
+.contenedor-formulario {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: auto;
+    margin-top: 10rem;
+    margin-bottom: 1rem;
+}
+
+.contenedor-formulario h3 {
+    padding-bottom: 2.5rem;
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+input, textarea {
+    background-color: rgba(255, 255, 255, 0);
+    font-family: 'Anta', sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border: 2px solid #19b10b;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    resize: none;
+  }
+  
+  label {
+    color: #fff;
+    font-size: 1.1rem;
+  }
+
+  input::placeholder {
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+  }
+  
+  input[type="submit"] {
+    background-color: #19b10b;
+    text-transform: uppercase;
+    color: white;
+    width: 35%;
+    cursor: pointer;
+    border: none;
+    transition: all .7s;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #136a0b;
+   }
+
+/* FOOTER */
+
+footer {
+    background: #000000;
+    padding: 3rem 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.partFooter {
+    width: 80%;
+    text-align: left;
+}
+
+.partFooter h4 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+#boton-top {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    bottom: 4.8rem;
+    right: 2rem;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgba(142, 142, 142, 0.19);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px #00000011;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+#boton-top:hover{
+    background-color: rgba(142, 142, 142, 0.833);
+    color: #ffffff;
+}
+
+#btnWhatsApp {
+    display: block; 
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px #00000048;
+    cursor: pointer;
+}
+
+/* Estilos para los iconos fijos */
+
+.iconos-fijos {
+    position: fixed;
+    top: 60%;
+    left: -100px; 
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.1rem;
+    background-color: #18900de3;
+    z-index: 1;
+    transition: left 0.5s ease; 
+}
+
+
+.iconos-fijos a {
+    color: white;
+    padding: 0.2rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem; 
+    transition: all ease-in-out 0.7s; 
+}
+
+.iconos-fijos a:hover {
+    transform: rotate(360deg);
+}
+
+/* Mostrar los iconos fijos al hacer scroll hacia abajo */
+
+body.scroll-down .iconos-fijos {
+    left: 0; 
+}
+
+/* TABLES */ 
+
+@media screen and (max-width: 1138px) {
+    h2 {
+        width: 30%;
+    }
+
+    .contenedor-inicial {
+        width: 90%;
+    }
+
+    .contenedor-proyecto {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* TELEFONOS */ 
+
+@media screen and (max-width:768px) {
+
+    .contenedor {
+        clip-path: none;
+    }
+
+    header {
+        height: 4rem;
+    }
+
+    .contenedor-pr {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        margin-left: 2rem;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+
+    .contenedor-pr h3 {
+        margin: 1rem 0; 
+    }
+
+    .contenido-header {
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 4rem;
+    }
+
+    .botones {
+        flex-direction: column; 
+        align-items: center; 
+        margin-top: 1.5rem;
+    }
+
+
+    .botones a {
+        width: 10rem;
+        margin: 0.1rem;
+    }
+
+    nav {
+        display: none;
+    }
+    
+    .articulo{
+        width: 100%;
+        margin: 0;
+    }
+
+    .articulo p {
+        text-align: left;
+    }
+
+    .articulo {
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .servicios {
+        width: 80%;
+    }
+
+    .contenedor-proyecto {
+        display: block;
+        width: 75%;
+    }
+
+    .textos-header {
+        margin: 0;
+    }
+
+    h2 {
+        width: 60%;
+    }
+
+    /* Navegacion Resposive */ 
+    
+    nav ul {
+        display: block;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-left: 2rem;
+        padding-top: 1.5rem;
+    } 
+
+    nav ul li{
+        margin-bottom: 2rem;
+    }
+
+    nav a{
+        font-size: 1.1rem;
+    }
+
+    nav a:hover{
+        color: #19b10b;
+    }
+
+    .home {
+        border: none;
+        color: #19b10b;
+    }
+
+    nav a:hover {
+        background-color: transparent; 
+        padding: 0;
+    }
+    
+    nav {
+        position: fixed;
+        background: #000000f5; 
+        top: 3.5rem;
+        right: 0;
+        width: 100%; 
+        height: 0; /* Cambiado a 0 por defecto */
+        overflow: hidden; /* Oculta cualquier contenido que desborde del contenedor */
+        display: flex;
+        flex-direction: column; /* Cambiado a column */
+        justify-content: space-evenly;
+        transition: height 0.5s ease; 
+    }
+    
+    nav.menudos {
+        height: 48vh; /* Ajusta la altura cuando está abierto */
+        align-items: flex-start; /* Alinea el menú en la parte superior cuando está abierto */
+    }
+    
+    nav li, nav i {
+        color: #fff; 
+    }
+    
+    .hamburguer {
+        display: block;
+    }
+
+    /* FORMULARIO */
+
+    .formulario-principal {
+        clip-path: none;
+    }
+
+    .formulario {
+        width: 80%;
+        grid-template-columns: none;
+        gap: 0;
+    }
+
+    .informacion h3, p{
+        text-align: center;
+    }
+
+    .informacion i {
+        width: 2.5rem;
+        height: 2.5rem;
+        line-height: 2.5rem; /* Ajustar la línea de altura para centrar más verticalmente */
+        margin: 0 0.6rem; 
+    }
+
+    .contenedor-formulario {
+        margin: 2.5rem 0 1rem 0;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+    }
+
+    /* FOOTER */
+
+    .partFooter {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:468px) {
+
+    .botones {
+        flex-direction: column; /* Cambia a diseño de columna en pantallas de 768px o menos */
+        align-items: center; 
+        margin-top: 0.1rem;
+    }
+
+    .botones a {
+        width: 9rem;
+        margin: 0.1rem; 
+    }
+
+    /* Footer */
+
+    footer {
+        padding-bottom: 1.5rem;
+    }
+
+    .partFooter {
+        width: 95%;
+        margin-bottom: 4rem;
+    }
+
+    .iconos-fijos {
+        padding: 0.1rem;
+        font-size: 0.8rem;
+    }
+}
