@@ -1,7 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', () => AOS.init());
 
-
 // SCROLL DE HEADER
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -83,7 +82,6 @@ enlaces.forEach(enlace => {
         }, 3000);
     });
 });
-
 
 // ICONOS
 
