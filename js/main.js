@@ -1,31 +1,29 @@
 
-document.addEventListener('DOMContentLoaded', function() {
-
-    AOS.init();
-});
+document.addEventListener('DOMContentLoaded', () => AOS.init());
 
 
 // SCROLL DE HEADER
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     const section = document.querySelector('.contenido');
 
-    window.onscroll = function () {
+    window.onscroll = () => {
         if (window.scrollY > section.offsetTop) {
-            header.style.backgroundColor = '#000';
+            header.style.background = '#000';
         } else {
-            header.style.backgroundColor = 'transparent';
+            header.style.background = 'transparent';
         }
     };
 });
 
 // BOTON DESLIZAR
-window.addEventListener('scroll', function () {
-    showScrollButton();
+
+document.addEventListener('scroll', () => {
+    scrollButton();
 });
 
-function showScrollButton() {
+const scrollButton = () => {
     const botonTop = document.getElementById("boton-top");
     const scrollPosition = window.scrollY;
 
@@ -33,8 +31,8 @@ function showScrollButton() {
 }
 
 // BOTON WHATSAPP
-function scrollToTop() {
-    let botonPosition = document.documentElement.scrollTop || document.body.scrollTop;
+const scrollToTop = () => {
+    const botonPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
     if (botonPosition > 0) {
         window.requestAnimationFrame(scrollToTop);
@@ -42,7 +40,7 @@ function scrollToTop() {
     }
 }
 
-function shareOnWhatsApp() {
+const whatsApp = () => {
     // Número de teléfono al que se enviará el mensaje
     let phoneNumber = "3006052169";
     
@@ -62,7 +60,7 @@ function shareOnWhatsApp() {
 let nav = document.querySelector("nav");
 let hamburguer = document.querySelector(".hamburguer");
 
-hamburguer.addEventListener("click", function(){
+hamburguer.addEventListener("click", () => {
     hamburguer.style.color = (hamburguer.style.color === "#fff") ? "#19b10b" : "#fff";
     nav.classList.toggle("menudos");
 
@@ -75,22 +73,22 @@ hamburguer.addEventListener("click", function(){
 let enlaces = document.querySelectorAll("nav a");
 
 enlaces.forEach(enlace => {
-    enlace.addEventListener("click", function() {
+    enlace.addEventListener("click", () => {
         // Cierra el menú al hacer clic en un enlace
         nav.classList.remove("menudos");
         hamburguer.style.color = "#fff";
         // Restaura el ícono de barras después de un pequeño retraso
         setTimeout(() => {
             hamburguer.innerHTML = `<i class="fa-solid fa-bars"></i>`;
-        }, 300);
+        }, 3000);
     });
 });
 
 
 // ICONOS
 
-window.addEventListener("scroll", function() {
-    let scrollY = window.scrollY;
+document.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
     if (scrollY > 0) {
         document.body.classList.add("scroll-down");
     } else {

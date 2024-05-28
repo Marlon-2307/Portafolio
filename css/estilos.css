@@ -71,18 +71,19 @@ header {
 }
 
 /* Estilos para la navegación */
+
 nav ul {
     list-style: none;
     display: flex;
 }
 
 nav ul li {
-    margin-right: 3rem; /* Espaciado entre elementos del menú */
+    margin-right: 3rem; 
 }
 
 nav a {
     text-decoration: none;
-    color: #ffffff; /* Cambia el color del enlace según tus preferencias */
+    color: #ffffff; 
     transition: all .7s;
     font-size: 0.9rem;
 }
@@ -98,7 +99,7 @@ nav a:hover {
 }
 
 .contenedor {
-    background: linear-gradient(rgba(0, 0, 0, 0.854), rgba(0, 0, 0, 0.591)), url(../Img/fondo-copia.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.854), rgba(0, 0, 0, 0.591)), url(../Img/fondo.jpg);
     background-color: #1e1e1e; clip-path: polygon(0 0, 100% 0, 100% 75%, 70% 100%, 0 85%);
     background-repeat: no-repeat;
     background-size: cover;
@@ -114,18 +115,18 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(../Img/fondo-copia.jpg) center/cover fixed; /* Usa background-attachment: fixed aquí */
+    background: url(../Img/fondo.jpg) center/cover fixed; 
     z-index: 1;
 }
 
 .textos {
-    text-align: center; /* Alinea el contenido al centro horizontal */
-    color: #333; /* Cambia el color del texto según tus preferencias */
+    text-align: center;
+    color: #333; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto; /* Ajusta la altura según tus necesidades */
+    height: auto;
     width: 60%;
     margin: auto;
     padding: auto;
@@ -153,7 +154,7 @@ nav a:hover {
     color: #fff;
     padding: 1rem 1.5rem;
     text-decoration: none;
-    transition: all 0.7s; /* Transición suave del color de fondo */
+    transition: all 0.7s;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -239,6 +240,7 @@ h2::after {
 .botones {
     display: flex;
     gap: 2rem;
+    box-shadow: 0 5px 10px #0000004d;
 }
 
 .contenido a {
@@ -348,7 +350,7 @@ h2::after {
 
 .skill {
     margin-bottom: 2rem;
-    position: relative; /* Añade posición relativa para elementos absolutos dentro */
+    position: relative; 
 }
 
 .skill h4 {
@@ -359,9 +361,9 @@ h2::after {
 
 .bar {
     height: 0.4rem;
-    background-color: #53b629ea; /* Cambia el color de fondo de la barra según tu preferencia */
-    width: 0; /* Inicialmente, la barra tiene un ancho de 0 */
-    transition: width 3s ease; /* Añade una transición para suavizar el cambio de ancho */
+    background-color: #53b629ea; 
+    width: 0; 
+    transition: width 3s ease;
 }
 
 .percentage {
@@ -375,6 +377,7 @@ h2::after {
 }
 
 /* Agrega animación para llenar la barra gradualmente */
+
 @keyframes fillBar {
     to {
         width: var(--percent); /* Ancho máximo cuando la animación esté completa */
@@ -382,18 +385,19 @@ h2::after {
 }
 
 /* Aplica la animación y el porcentaje a cada clase que tiene la propiedad de la barra */
+
 .skill .bar {
     --percent: 61%;
     animation: fillBar 1s forwards;
 }
 
 .skill:nth-child(2) .bar {
-    --percent: 80%;
+    --percent: 50%;
     animation: fillBar 1s forwards;
 }
 
 .skill:nth-child(3) .bar {
-    --percent: 50%;
+    --percent: 80%;
     animation: fillBar 1s forwards;
 }
 
@@ -403,7 +407,12 @@ h2::after {
 }
 
 .skill:nth-child(5) .bar {
-    --percent: 60%;
+    --percent: 50%;
+    animation: fillBar 1s forwards;
+}
+
+.skill:nth-child(6) .bar {
+    --percent: 50%;
     animation: fillBar 1s forwards;
 }
 
@@ -420,13 +429,13 @@ h2::after {
 }
 
 .proyecto {
-    width: 100%; /* Ajusta el ancho según sea necesario */
+    width: 100%; 
     margin: 2rem 0 1rem 0;
 }
 
 .proyecto img {
-    width: 100%; /* Ajusta el ancho según sea necesario */
-    height: auto; /* Para mantener la proporción original de la imagen */
+    width: 100%; 
+    height: auto; 
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.179);
     transition: transform 0.5s ease-in-out;
 }
@@ -541,6 +550,7 @@ input, textarea {
     cursor: pointer;
     border: none;
     transition: all .7s;
+    box-shadow: 0 5px 10px #0000004d;
   }
 
   input[type="submit"]:hover {
@@ -583,9 +593,9 @@ footer {
     color: #ffffff;
     border: none;
     border-radius: 50%;
-    box-shadow: 0 2px 5px #00000011;
     cursor: pointer;
     transition: all .5s;
+    box-shadow: 0 5px 10px #0000004d;
 }
 
 #boton-top:hover{
@@ -594,7 +604,7 @@ footer {
 }
 
 #btnWhatsApp {
-    display: block; /* O elige cómo deseas mostrarlo inicialmente */
+    display: block; 
     position: fixed;
     bottom: 2rem;
     right: 2rem;
@@ -606,15 +616,16 @@ footer {
     color: #fff;
     border: none;
     border-radius: 50%;
-    box-shadow: 0 2px 8px #00000048;
     cursor: pointer;
+    box-shadow: 0 5px 10px #0000004d;
 }
 
 /* Estilos para los iconos fijos */
+
 .iconos-fijos {
     position: fixed;
     top: 60%;
-    left: -100px; /* Oculta los iconos fijos hacia la izquierda */
+    left: -100px; 
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -622,17 +633,17 @@ footer {
     padding: 0.1rem;
     background-color: #18900de3;
     z-index: 1;
-    transition: left 0.5s ease; /* Agregamos una transición para suavizar el efecto */
+    transition: left 0.5s ease; 
 }
 
-/* Estilos para los iconos (puedes personalizar según tus necesidades) */
+
 .iconos-fijos a {
     color: white;
     padding: 0.2rem;
     text-align: center;
     text-decoration: none;
     font-size: 1.2rem;
-    margin-bottom: 0.5rem; /* Espacio entre los iconos */
+    margin-bottom: 0.5rem; 
     transition: all ease-in-out 0.7s; 
 }
 
@@ -641,8 +652,9 @@ footer {
 }
 
 /* Mostrar los iconos fijos al hacer scroll hacia abajo */
+
 body.scroll-down .iconos-fijos {
-    left: 0; /* Muestra los iconos fijos en el lado izquierdo */
+    left: 0; 
 }
 
 /* TABLES */ 
@@ -689,7 +701,7 @@ body.scroll-down .iconos-fijos {
     }
 
     .contenedor-pr h3 {
-        margin: 1rem 0; /* Ajusta el margen del logo en pantallas pequeñas */
+        margin: 1rem 0; 
     }
 
     .contenido-header {
@@ -699,15 +711,15 @@ body.scroll-down .iconos-fijos {
     }
 
     .botones {
-        flex-direction: column; /* Cambia a diseño de columna en pantallas de 768px o menos */
-        align-items: center; /* Alinea los botones horizontalmente en el centro */
+        flex-direction: column; 
+        align-items: center; 
         margin-top: 1.5rem;
     }
 
-    /* Agrega estilos adicionales según sea necesario para pantallas más pequeñas */
+
     .botones a {
         width: 10rem;
-        margin: 0.1rem; /* Ajusta el margen entre los botones */
+        margin: 0.1rem;
     }
 
     nav {
@@ -725,7 +737,7 @@ body.scroll-down .iconos-fijos {
 
     .articulo {
         padding: 2rem;
-        margin-bottom: 0;
+        margin-bottom: 2rem;
     }
 
     .servicios {
@@ -746,7 +758,6 @@ body.scroll-down .iconos-fijos {
     }
 
     /* Navegacion Resposive */ 
-
     
     nav ul {
         display: block;
@@ -774,22 +785,22 @@ body.scroll-down .iconos-fijos {
     }
 
     nav a:hover {
-        background-color: transparent; /* Cambiado de 'none' a 'transparent' */
+        background-color: transparent; 
         padding: 0;
     }
     
     nav {
         position: fixed;
-        background: #000000f5; /* Ajusta el color de fondo según tus preferencias */
+        background: #000000f5; 
         top: 3.5rem;
         right: 0;
-        width: 100%; /* Ajusta el ancho según tus necesidades */
+        width: 100%; 
         height: 0; /* Cambiado a 0 por defecto */
         overflow: hidden; /* Oculta cualquier contenido que desborde del contenedor */
         display: flex;
         flex-direction: column; /* Cambiado a column */
         justify-content: space-evenly;
-        transition: height 0.5s ease; /* Ajusta la duración y la función de temporización según tus preferencias */
+        transition: height 0.5s ease; 
     }
     
     nav.menudos {
@@ -798,7 +809,7 @@ body.scroll-down .iconos-fijos {
     }
     
     nav li, nav i {
-        color: #fff; /* Color del texto */
+        color: #fff; 
     }
     
     .hamburguer {
@@ -825,7 +836,7 @@ body.scroll-down .iconos-fijos {
         width: 2.5rem;
         height: 2.5rem;
         line-height: 2.5rem; /* Ajustar la línea de altura para centrar más verticalmente */
-        margin: 0 0.6rem; /* Ajustar el margen para centrar y reducir el espacio entre íconos */
+        margin: 0 0.6rem; 
     }
 
     .contenedor-formulario {
@@ -848,14 +859,13 @@ body.scroll-down .iconos-fijos {
 
     .botones {
         flex-direction: column; /* Cambia a diseño de columna en pantallas de 768px o menos */
-        align-items: center; /* Alinea los botones horizontalmente en el centro */
+        align-items: center; 
         margin-top: 0.1rem;
     }
 
-    /* Agrega estilos adicionales según sea necesario para pantallas más pequeñas */
     .botones a {
         width: 9rem;
-        margin: 0.1rem; /* Ajusta el margen entre los botones */
+        margin: 0.1rem; 
     }
 
     /* Footer */
