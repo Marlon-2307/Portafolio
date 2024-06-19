@@ -47,7 +47,7 @@ const whatsApp = () => {
     let message = "¡Hola! Me encuentro interesado en tus servicios.";
 
     // Construir el enlace de WhatsApp
-    let whatsappLink = `https://wa.me/${phoneNumber}/?text=${encodeURIComponent(message)}`;
+    const whatsappLink = `https://wa.me/${phoneNumber}/?text=${encodeURIComponent(message)}`;
 
     // Redirigir a la página de WhatsApp
     window.location.href = whatsappLink;
